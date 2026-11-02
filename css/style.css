@@ -1,0 +1,94 @@
+:root {
+  --bg: #fdfcf9;
+  --text: #2a2622;
+  --muted: #6b645c;
+  --accent: #7a4b2a;
+  --rule: #e2ddd4;
+  --measure: 34rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 112.5%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--text); }
+
+/* Book covers across the top */
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem 1rem 1rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.shelf a { display: block; line-height: 0; }
+.shelf img {
+  width: 120px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.shelf a:hover img,
+.shelf a:focus-visible img {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 2.75rem 0 1rem;
+}
+h2::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  margin: 0 auto 2.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+p { margin: 0 0 1.1rem; }
+
+nav.back { text-align: center; margin-top: 2.5rem; }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 2rem 1rem 3rem;
+}
+
+@media (max-width: 480px) {
+  html { font-size: 106%; }
+  .shelf { gap: 1rem; padding-top: 2rem; }
+  .shelf img { width: 96px; }
+  h1 { font-size: 1.8rem; }
+}
