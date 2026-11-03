@@ -115,3 +115,10 @@ footer {
 .standards li { padding-left: 1.9rem; position: relative; }
 .standards strong { font-weight: 500; }
 .standards li::before { content: "✓"; position: absolute; left: 0.2rem; color: var(--accent); }
+
+/* Advance copy request */
+.arc { margin: 0 0 2rem; }
+.arc-note { margin: 0 0 0.4rem; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.arc-button { display: inline-block; padding: 0.6rem 1.5rem; background: var(--accent); color: var(--bg); text-decoration: none; letter-spacing: 0.05em; }
+.arc-button:hover, .arc-button:focus-visible { background: var(--text); color: var(--bg); }
+.arc-alt { margin: 0.6rem 0 0; font-size: 0.9rem; color: var(--muted); }
